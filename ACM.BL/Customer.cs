@@ -10,6 +10,9 @@ namespace ACM.BL
     public class Customer
     {
         public Customer()
+            //constructor chaining
+            // default constructor calls the parametrize consructor with default value
+            :this(0)
         {
 
         }
@@ -17,7 +20,12 @@ namespace ACM.BL
         public Customer(int customerId)
         {
             this.CustomerId = customerId;
+            // sets AddressList to empty addresslist instead of null 
+            AddressList = new List<Address>();
         }
+
+        // composition relationship (has a)
+        public List<Address> AddressList { get; set; }
 
         // when you use the static modifier you declare a member, that member belong to Class itself
         public static int InstanceCount { get; set; }

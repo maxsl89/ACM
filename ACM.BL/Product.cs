@@ -30,7 +30,7 @@ namespace ACM.BL
         public bool Validate()
         {
             var isValid = true;
-            if (string.IsNullOrWhiteSpace(productName)) isValid = false;
+            //if (string.IsNullOrWhiteSpace(productName)) isValid = false;
             if (CurrentPrice == null) isValid = false;
 
             return isValid;
