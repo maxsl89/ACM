@@ -1,7 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
-using System.Text;
 using ACM.BL;
 
 namespace ACM.BLTest
@@ -12,6 +11,7 @@ namespace ACM.BLTest
     [TestClass]
     public class OrderRepositoryTest
     {
+        [TestMethod]
         public void RetrieveOrderDisplayTest()
         {
             //-- Arrange
@@ -36,7 +36,7 @@ namespace ACM.BLTest
                     new OrderDisplayItem()
                     {
                         OrderQuantity = 2,
-                        ProductName = "SunFlowers",
+                        ProductName = "Sunflowers",
                         PurchasePrice = 15.96M,
                     },
                     new OrderDisplayItem()

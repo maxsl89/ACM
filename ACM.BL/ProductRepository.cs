@@ -17,6 +17,8 @@ namespace ACM.BL
             //Pass in the request id
             Product product = new Product(productId);
 
+            Console.WriteLine("Product: " + product.ToString());
+            
             //Code that retrieves the difined product 
 
             //Temporary hard coded values to return 
@@ -30,6 +32,23 @@ namespace ACM.BL
 
             }           
             return product;
-        }       
+        } 
+        
+        public bool Save (Product product)
+        {
+            var success = true;
+            if(product.HasChanges && product.IsValid)
+            {
+                if (product.IsNew)
+                {
+                    // Call an Insert Stored Procedure
+                }
+                else
+                {
+                    // call an update Stored Procedure
+                }
+            }
+            return success;
+        }
     }
 }

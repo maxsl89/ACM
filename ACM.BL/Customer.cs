@@ -27,6 +27,8 @@ namespace ACM.BL
         // composition relationship (has a)
         public List<Address> AddressList { get; set; }
 
+        public int CustomerType { get; set; }
+
         // when you use the static modifier you declare a member, that member belong to Class itself
         public static int InstanceCount { get; set; }
 
@@ -79,6 +81,11 @@ namespace ACM.BL
             if (string.IsNullOrWhiteSpace(EmailAddress)) isValid = false;
 
             return isValid;
+        }
+
+        public override string ToString()
+        {
+            return FullName;
         }
 
     }
